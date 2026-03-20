@@ -260,7 +260,7 @@ body.nav-hidden #navbar {
   }
 }
 
-/* ✅ Lazy loading images */
+/* Lazy loading & fade-in animations for images */
 .hero-bg, .lookbook-img, .product-img, .pm-image-shell img, .thumb img {
   will-change: transform, opacity;
   display:block;
@@ -272,7 +272,7 @@ body.nav-hidden #navbar {
   opacity:1;
 }
 
-/* Hero background with overlay */
+/* Hero background */
 .hero-bg {
   position:absolute;
   inset:0;
@@ -341,11 +341,47 @@ body.nav-hidden #navbar {
 .primary-btn:hover { filter: brightness(1.05); transform: translateY(-1px); }
 .primary-btn:active { transform: translateY(-2px); }
 
-/* Titles */
+/* Section titles */
 .section-title { font-size: var(--h2); margin-bottom:22px; font-weight:800; letter-spacing:0.02em; }
 .purple-title { color: var(--primary); }
 .aligned-title { max-width: var(--container); margin: 0 auto; padding-left: var(--px); padding-right: var(--px); }
 @media (max-width:768px) { .aligned-title { padding-left: var(--px-sm); padding-right: var(--px-sm); } }
 
-/* Continue with Lookbook, Shop, Product, Cart, Modals, Checkout, Footer... */
-/* ... same as before, animations applied to all images and cards with [data-loaded="true"] pattern for lazy loading ... */
+/* Product / Lookbook cards */
+.product-card, .lookbook-card {
+  background: var(--surface);
+  border-radius:14px;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  cursor:pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.product-card:hover, .lookbook-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.55);
+}
+.product-img, .lookbook-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.product-info {
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  border-top: 1px solid #222;
+  padding: 64px var(--px);
+  text-align: center;
+  color: #777;
+}
+footer a { color: #aaa; text-decoration: none; transition: color 0.25s ease; }
+footer a:hover { color: var(--primary); }
+@media (max-width:768px) { footer { padding:48px var(--px-sm); } }
