@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="HqbWK4F6IQINDYOwmNUj_tNChnYlAYYynC0S1QBVoj4" />
+
+    <title>FAIDE | Luxury Streetwear Brand</title>
+    <meta
+      name="description"
+      content="FAIDE luxury streetwear. New drops, exclusive releases, and curated essentials. Designed with intention. Worn with purpose."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://faide-website.vercel.app/" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <link rel="preload" as="image" href="images/hero.png" />
+    <link rel="preload" as="image" href="images/faide-wordmark.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="FAIDE | Luxury Streetwear Brand" />
+    <meta property="og:site_name" content="FAIDE" />
+    <meta
+      property="og:description"
+      content="Luxury streetwear designed with intention. New drops, exclusive releases, and curated essentials."
+    />
+    <meta property="og:url" content="https://faide-website.vercel.app/" />
+    <meta property="og:image" content="https://faide-website.vercel.app/images/hero.png" />
+    <meta property="og:image:secure_url" content="https://faide-website.vercel.app/images/hero.png" />
+    <meta property="og:image:alt" content="FAIDE luxury streetwear hero image" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@faideclothing" />
+    <meta name="twitter:title" content="FAIDE™ | Luxury Streetwear Brand" />
+    <meta
+      name="twitter:description"
+      content="Luxury streetwear designed with intention. New drops, exclusive releases, and curated essentials."
+    />
+    <meta name="twitter:image" content="https://faide-website.vercel.app/images/hero.png" />
+    <meta name="twitter:image:alt" content="FAIDE luxury streetwear hero image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Brand",
+        "@id": "https://faide-website.vercel.app/#brand",
+        "name": "FAIDE",
+        "url": "https://faide-website.vercel.app/",
+        "logo": "https://faide-website.vercel.app/images/faide-wordmark.png",
+        "description": "FAIDE is a luxury streetwear brand designed with intention and worn with purpose.",
+        "sameAs": [
+          "https://www.facebook.com/faideclothing",
+          "https://www.instagram.com/faideclothing",
+          "https://www.tiktok.com/@faideclothing",
+          "https://x.com/faideclothing"
+        ]
+      }
+    </script>
+
+    <!-- SDKs -->
+    <script src="_sdk/element_sdk.js" defer></script>
+    <script src="_sdk/data_sdk.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- NAV -->
+    <nav class="navbar" id="navbar">
+      <a href="#drop" aria-label="FAIDE Home" class="brand-link">
+        <img src="images/faide-wordmark.png" alt="FAIDE" class="faide-wordmark-img" id="brand-wordmark" />
+      </a>
+
+      <div class="nav-links" aria-label="Primary navigation">
+        <a href="#drop" data-nav-link="main">NEW DROP</a>
+        <a href="#lookbook" data-nav-link="main">LOOKBOOK</a>
+        <a href="#shop" data-nav-link="main">SHOP</a>
+        <a href="#about" data-nav-link="main">ABOUT</a>
+      </div>
+
+      <div class="nav-mobile-actions" aria-label="Mobile navigation controls">
+        <button id="mobile-search-btn" class="nav-icon-btn" type="button" aria-label="Search shop">
+          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M10 2a8 8 0 105.293 14.293l4.707 4.707a1 1 0 001.414-1.414l-4.707-4.707A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"
+            />
+          </svg>
+        </button>
+
+        <button
+          id="mobile-menu-btn"
+          class="nav-icon-btn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu-panel"
+        >
+          <span class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu side drawer + overlay -->
+    <div id="mobile-drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+
+    <aside id="mobile-menu-panel" class="drawer" aria-hidden="true" aria-label="Mobile menu">
+      <div class="drawer-head">
+        <div class="drawer-title">MENU</div>
+        <button id="drawer-close" class="drawer-close" type="button" aria-label="Close menu">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="drawer-links">
+        <a href="#drop" data-nav-link="main">NEW DROP</a>
+        <a href="#lookbook" data-nav-link="main">LOOKBOOK</a>
+        <a href="#shop" data-nav-link="main">SHOP</a>
+        <a href="#about" data-nav-link="main">ABOUT</a>
+      </div>
+    </aside>
+
+    <!-- MAIN SITE CONTENT -->
+    <div id="site-content">
+      <section id="drop" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <div class="hero-content">
+          <h2 class="hero-title fade-in-up delay-1" id="hero-title">NEW DROP</h2>
+          <p class="hero-text fade-in-up delay-2" id="hero-description">
+            New drops, exclusive releases, and updates are announced on our social platforms.
+          </p>
+
+          <div class="hero-social-icons fade-in-up delay-2">
+            <a href="https://www.instagram.com/faideclothing" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919..."/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/faideclothing" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/faideclothing" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@faideclothing" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="TikTok">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74..."/>
+              </svg>
+            </a>
+          </div>
+
+          <button class="primary-btn fade-in-up delay-3" id="shop-now-btn">Shop Now</button>
+        </div>
+      </section>
+
+      <!-- Lookbook -->
+      <section id="lookbook" class="lookbook">
+        <h2 class="section-title purple-title aligned-title">Lookbook</h2>
+        <div class="vertical-list" id="lookbook-list"></div>
+      </section>
+
+      <!-- Shop -->
+      <section id="shop" class="shop">
+        <div class="shop-head">
+          <h2 class="section-title purple-title aligned-title shop-title">Shop</h2>
+          <div class="shop-search-wrap" aria-label="Search products">
+            <input id="shop-search-input" class="shop-search-input" type="search" placeholder="Search products..." autocomplete="off" aria-label="Search products" />
+            <button id="shop-search-clear" class="shop-search-clear" type="button" aria-label="Clear search">×</button>
+          </div>
+        </div>
+        <div class="horizontal-scroll" id="shop-products"></div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="about">
+        <h2 class="section-title purple-title" id="about-title">About FAIDE</h2>
+        <p id="about-description">FAIDE is a luxury streetwear brand built for those who move in silence. Designed with intention. Worn with purpose.</p>
+        <div class="about-contact">
+          <h4>Contact</h4>
+          <a href="mailto:faideclothingsa@gmail.com">faideclothingsa@gmail.com</a>
+          <a href="tel:+27695603929">+27 69 560 3929</a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer" class="footer">
+        <div class="footer-inner">
+          <div class="footer-legal">
+            <div class="footer-legal-top" aria-label="Policies">
+              <a href="#" id="privacy-link" class="footer-legal-link">Privacy Policy</a>
+              <span class="footer-sep">|</span>
+              <a href="#" id="shipping-link" class="footer-legal-link">Shipping Policy</a>
+              <span class="footer-sep">|</span>
+              <a href="#" id="terms-link" class="footer-legal-link">Terms of Service</a>
+              <span class="footer-sep">|</span>
+              <a href="#" id="returns-link" class="footer-legal-link">Return and exchange</a>
+            </div>
+            <p class="footer-copy">© 2026 FAIDE. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- JS: Lookbook & Shop -->
+    <script src="assets/js/app.js" defer></script>
+
+    <script>
+      // Lookbook & Product Data
+      const lookbookData = [
+        { id: 1, image: "images/lookbook1.png", alt: "FAIDE Lookbook 1" },
+        { id: 2, image: "images/lookbook2.png", alt: "FAIDE Lookbook 2" }
+      ];
+
+      const productData = [
+        { id:"tank", name:"FAIDE Essentials Tank", label:"Just In", category:"UNISEX Tank Top", price:199.99, currencySymbol:"R", sizes:["S","M","L","XL"], colors:[{name:"Black",className:"color black"},{name:"White",className:"color white"}], images:["images/tank-top.png","images/tank-top1.png","images/tank-top2.png","images/tank-top3.png"] },
+        { id:"tee", name:"FAIDE Signature Tee", label:"Bestseller", category:"UNISEX Short-Sleeve Top", price:349.99, currencySymbol:"R", sizes:["S","M","L","XL"], colors:[{name:"Black",className:"color black"},{name:"White",className:"color white"},{name:"Grey",className:"color grey"}], images:["images/tshirt.png","images/tshirt1.png","images/tshirt2.png","images/tshirt3.png"] },
+        { id:"longsleeve", name:"FAIDE Long Sleeve", label:"Member Exclusive", category:"UNISEX Long Sleeve", price:549.99, currencySymbol:"R", sizes:["S","M","L","XL"], colors:[{name:"Black",className:"color black"},{name:"White",className:"color white"}], images:["images/longsleeve.png","images/longsleeve1.png","images/longsleeve2.png","images/longsleeve3.png"] },
+        { id:"hoodie", name:"FAIDE Luxury Hoodie", label:"Premium", category:"UNISEX Pullover Hoodie", price:699.99, currencySymbol:"R", sizes:["S","M","L","XL"], colors:[{name:"Black",className:"color black"},{name:"White",className:"color white"}], images:["images/hoodie.png","images/hoodie1.png","images/hoodie2.png","images/hoodie3.png"] },
+        { id:"beanie", name:"FAIDE Beanie", label:"Bestseller", category:"UNISEX Beanie", price:119.99, currencySymbol:"R", sizes:["One Size"], colors:[{name:"Black",className:"color black"},{name:"White",className:"color white"}], images:["images/beanie.jpg","images/beanie1.png","images/beanie2.png","images/beanie3.png"] }
+      ];
+
+      // Populate lookbook list
+      const lookbookListEl = document.getElementById('lookbook-list');
+      lookbookData.forEach(item=>{
+        const div=document.createElement('div');
+        div.className='lookbook-item fade-in-up';
+        div.innerHTML=`<img src="${item.image}" alt="${item.alt}" />`;
+        div.addEventListener('click',()=>{document.getElementById('route-lookbook').ariaHidden=false; document.getElementById('rlb-img').src=item.image;});
+        lookbookListEl.appendChild(div);
+      });
+
+      // Populate shop products
+      const shopProductsEl = document.getElementById('shop-products');
+      productData.forEach(prod=>{
+        const card=document.createElement('div');
+        card.className='product-card fade-in-up';
+        card.innerHTML=`
+          <img src="${prod.images[0]}" alt="${prod.name}" />
+          <div class="product-info">
+            <div class="product-label">${prod.label}</div>
+            <h3>${prod.name}</h3>
+            <div class="product-price">R${prod.price}</div>
+          </div>`;
+        card.addEventListener('click',()=>{
+          document.getElementById('route-product').ariaHidden=false;
+          document.getElementById('rpp-img').src=prod.images[0];
+          document.getElementById('rpp-name').textContent=prod.name;
+          document.getElementById('rpp-label').textContent=prod.label;
+          document.getElementById('rpp-category').textContent=prod.category;
+          document.getElementById('rpp-price').textContent=`R${prod.price}`;
+          const sizeContainer=document.getElementById('rpp-sizes');
+          sizeContainer.innerHTML='';
+          prod.sizes.forEach(s=>{const b=document.createElement('button');b.type='button';b.className='size-btn';b.textContent=s;sizeContainer.appendChild(b);});
+          const colorContainer=document.getElementById('rpp-colors-row');
+          colorContainer.innerHTML='';
+          prod.colors.forEach(c=>{const span=document.createElement('span');span.className=c.className;span.title=c.name;colorContainer.appendChild(span);});
+          const thumbs=document.getElementById('rpp-thumbs');
+          thumbs.innerHTML='';
+          prod.images.forEach(img=>{const t=document.createElement('img');t.src=img;t.alt=prod.name;t.className='thumb';t.addEventListener('click',()=>{document.getElementById('rpp-img').src=img;});thumbs.appendChild(t);});
+        });
+        shopProductsEl.appendChild(card);
+      });
+    </script>
+  </body>
+</html>
